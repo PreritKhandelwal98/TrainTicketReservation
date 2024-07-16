@@ -2,47 +2,76 @@
 .seat-map {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-}
-
-.seat-row {
+    gap: 10px;
+  }
+  
+  .seat-row {
     display: flex;
     gap: 5px;
-}
-
-.seat {
+    justify-content: center;
+  }
+  
+  .seat {
     padding: 10px;
     color: white;
     border-radius: 5px;
-}
-
-.available {
+    text-align: center;
+    width: 40px;
+  }
+  
+  .available {
     background-color: green;
-}
-
-.booked {
+  }
+  
+  .booked {
     background-color: red;
-}
-
-.input-container {
+  }
+  
+  .input-container {
     display: flex;
     align-items: center;
-}
-
-input {
+  }
+  
+  input {
     max-width: 100px;
     margin-right: 10px;
-}
-
-button {
+  }
+  
+  button {
     background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-}
+  }
+  
+  .reserved-seats {
+    margin-top: 10px;
+  }
+  
+  .legend {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .available {
+    background-color: green;
+  }
+  
+  .booked {
+    background-color: red;
+  }
+  
