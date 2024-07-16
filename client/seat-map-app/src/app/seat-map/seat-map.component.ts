@@ -1,4 +1,3 @@
-// src/app/seat-map/seat-map.component.ts
 import { Component, OnInit } from '@angular/core';
 import { SeatService } from '../seat.service';
 

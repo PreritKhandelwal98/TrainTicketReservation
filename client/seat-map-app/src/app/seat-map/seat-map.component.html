@@ -1,1 +1,36 @@
-<p>seat-map works!</p>
+<div class="container mt-5">
+    <div class="row mb-3 align-items-center input-container">
+        <div class="col">
+            <label class="form-label">Number of Seats:</label>
+            <input type="number" class="form-control" [(ngModel)]="numSeats" min="1" max="7" />
+        </div>
+        <div class="col-auto">
+            <button class="btn" (click)="handleReserve()">Reserve</button>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col">
+            <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+        </div>
+    </div>
+    <div *ngIf="reservedSeats.length > 0" class="mb-3">
+        <h3>Reserved Seats:</h3>
+        <span *ngFor="let seat of reservedSeats">
+            Row {{ seat.row + 1 }} Seat {{ seat.seat + 1 }},
+        </span>
+    </div>
+    <div class="row row-cols-auto g-3 seat-map">
+        <div *ngFor="let row of seats; let rowIndex = index" class="col">
+            <div class="seat-row">
+                <span *ngFor="let seat of row.seats; let seatIndex = index"
+                    [ngClass]="{ seat: true, booked: seat === 1, available: seat === 0 }">
+                    {{ seatIndex + 1 }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="legend mt-3">
+        <span class="available"></span> Available
+        <span class="booked"></span> Reserved
+    </div>
+</div>
