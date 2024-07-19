@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SeatService {
-  private backendUrl = 'http://localhost:5000'; // Replace with your backend URL
+  private backendUrl = 'https://trainticketreservation.onrender.com'; // Replace with your backend URL
 
   constructor(private http: HttpClient) { }
 
